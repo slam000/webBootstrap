@@ -1,10 +1,34 @@
 from flask import Flask, render_template, request, redirect, url_for
-# from reactpy import component, html
+import os
+import json
 
 
 active = 'index'
 
 app = Flask(__name__)  # Instancia de Flask
+
+def compruebajson(ruta_json):
+    if not os.path.exists(ruta_json):
+        # Crear una lista de experiencias
+        experiencias = [
+            {
+                "fechainicio": "2020-01-01",
+                "fechafin": "2022-01-01",
+                "titulo": "Ingeniero de Software",
+                "experiencia": "Desarrollo de aplicaciones web",
+                "claves": ["Python", "Flask", "JavaScript"]
+            },
+            {
+                "fechainicio": "2018-01-01",
+                "fechafin": "2020-01-01",
+                "titulo": "Desarrollador Full Stack",
+                "experiencia": "Desarrollo de aplicaciones full stack",
+                "claves": ["Python", "Django", "React"]
+            }
+        ]
+        # Escribir la lista de experiencias al archivo JSON
+        with open(ruta_json, 'w') as f:
+            json.dump(experiencias, f)
 
 # Pagina de inicio
 @app.route('/')
