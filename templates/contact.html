@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+    Contacto    
+{% endblock titulo %}
+ 
+ {% block contenido %}
+    <div class="row aling-items-center ">
+        <div class="col" id="#1">
+            <h1>Contacto</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="nombreHelp">
+                    <div id="nombreHelp" class="form-text">Introduce tu nombre.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">Introduce tu correo electrónico.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>    
+ {% endblock contenido %}
+    

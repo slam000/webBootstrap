@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block titulo %}
+    Error 404
+{% endblock titulo %}
+
+{% block contenido %}
+    <div class="row aling-items-center ">
+        <div class="col" id="#1">
+            {{ txtfront | capitalize }}
+            <p>Esta página no existe.</p>
+            <p><a href="{{ url_for('index') }}">Volver al sitio</a></p>
+        </div>
+    </div>
+{% endblock contenido %}
+```

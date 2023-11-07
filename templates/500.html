@@ -1,0 +1,17 @@
+{% extends '500.html' %}
+
+
+{% block titulo %}
+    Error 500
+{% endblock titulo %}    
+
+
+{% block contenido %}
+    <div class="row aling-items-center ">
+        <div class="col" id="#1">
+            <h1>Error 500</h1>
+            <p>Esta página no existe.</p>
+            <p><a href="{{ url_for('index') }}">Volver al sitio</a></p>
+        </div>
+{% endblock contenido %}
+    
